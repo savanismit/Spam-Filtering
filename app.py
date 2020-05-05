@@ -1,9 +1,9 @@
 from flask import Flask,request
 import pickle
 import string
-from nltk.corpus import stopwords
+from nltk import corpus 
 
-app =Flask(__name__)
+app=Flask(__name__)
 @app.route('/')
 def hello():
     return 'Hello Smit'
@@ -11,7 +11,7 @@ def hello():
 def msg_processor(mess):
     no_punc = [c for c in mess if c not in string.punctuation]
     no_punc = ''.join(no_punc)
-    return [word for word in no_punc.split() if word.lower() not in stopwords.words('english')]
+    return [word for word in no_punc.split() if word.lower() not in corpus.stopwords.words('english')]
 
 @app.route('/<string:msg>',methods=['GET','POST'])
 def test(msg):
