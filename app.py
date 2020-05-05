@@ -3,7 +3,8 @@ import pickle
 import string
 from nltk import corpus 
 
-app=Flask(__name__)
+app = Flask(__name__)
+
 @app.route('/')
 def hello():
     return 'Hello Smit'
@@ -21,9 +22,9 @@ def test(msg):
     pred = trans.predict(mess)
     pred = ''.join(pred)
     if pred == 'ham':
-        return "Normal Message"
+        return("Normal Message")
     else:
-        return "It's a Spam Message"
+        return ("It is a Spam Message")
 
 if __name__ == '__main__':
     app.run(debug=True)
