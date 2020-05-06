@@ -1,0 +1,3 @@
+wordnet
+corpus
+stopwords

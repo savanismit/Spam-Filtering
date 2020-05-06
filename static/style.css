@@ -12,13 +12,14 @@ body{
 
 .container .h1{
     color: black;
-    margin-bottom: 5%;
+	margin-bottom: 5%;
+	text-align: center;
 }
 
 header{
-	background:#03A9F4;
-	border-bottom:#448AFF 3px solid;
-	height:120px;
+	background-color:black;
+	border-bottom:grey 3px solid;
+	height:100px;
 	width:100%;
 	padding-top:30px;
 
@@ -41,19 +42,4 @@ header{
 header h2{
 	text-align:center;
 	color:#fff;
-
-}
-
-.btn-info {background-color: #2196F3;
-	height:40px;
-	width:100px;} /* Blue */
-.btn-info:hover {background: #0b7dda;}
-
-
-.resultss{
-	border-radius: 15px 50px;
-    background: #345fe4;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;
 }

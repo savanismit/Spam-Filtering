@@ -1,7 +1,7 @@
 from flask import Flask,request,render_template,url_for
 import pickle
 import string
-from nltk import corpus 
+from nltk.corpus import stopwords
 import os
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ def hello():
 def msg_processor(mess):
     no_punc = [c for c in mess if c not in string.punctuation]
     no_punc = ''.join(no_punc)
-    return [word for word in no_punc.split() if word.lower() not in corpus.stopwords.words('english')]
+    return [word for word in no_punc.split() if word.lower() not in stopwords.words('english')]
 
 @app.route('/predict',methods=['GET','POST'])
 def predict():
